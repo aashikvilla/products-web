@@ -1,24 +1,28 @@
-import { i18n } from '../../../i18n-config'
-
-export async function generateStaticParams() {
-  return i18n.locales.map((locale) => ({ lang: locale }))
-}
-
-export default function Root({
-  children,
-  params,
-}: {
-  children: React.ReactNode
-  params: { lang: string }
-}) {
-  return (
-    <html lang={params.lang}>
-      <body>{children}</body>
-    </html>
-  )
-}
+import "../globals.css";
+import { Locale, i18n } from "../../../i18n-config";
+import Header from "./components/Header";
 
 export const metadata = {
-  title: 'i18n within app directory - Vercel Examples',
-  description: 'How to do i18n in Next.js 13 within app directory',
+  title: "Ecommerce",
+  description: "Online Shopping site",
+};
+
+export async function generateStaticParams() {
+  return i18n.locales.map((locale) => ({ lang: locale }));
+}
+
+interface IRootLayout {
+  children: React.ReactNode;
+  params: { lang: Locale };
+}
+
+export default function RootLayout({ children, params }: IRootLayout) {
+  return (
+    <html lang={params.lang}>
+      <body>
+        <Header lang={params.lang} />
+        {children}
+      </body>
+    </html>
+  );
 }

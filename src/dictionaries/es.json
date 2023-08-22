@@ -1,0 +1,31 @@
+{
+  "welcome": "Bienvenida",
+  "links": [
+    { "name": "Home", "href": "/" },
+    { "name": "Productos", "href": "/products" },
+    { "name": "Acerca de", "href": "/about" },
+    { "name": "Contacto", "href": "/contact" }
+  ],
+  "heroSection": {
+    "image": {
+      "src": "https://cdn.pixabay.com/photo/2023/08/03/19/34/catholic-church-8167850_1280.png",
+      "alt": "imagen de héroe"
+    },
+    "title": "Bienvenido a nuestra tienda",
+    "description": "Descubre los mejores productos y ofertas.",
+    "button": "Compra ahora!"
+  },
+  "subHeadings": {
+    "category": "categoría",
+    "review": "revisar"
+  },
+  "categories": ["Ropa", "Electrónica", "Zapatos"],
+  "reviews": [
+    { "title": "Asombrosa", "descrption": "Gran calidad" },
+    {
+      "title": "Rápida",
+      "descrption": "El servicio al cliente fue excelente."
+    },
+    { "title": "Elección", "descrption": "Gran variedad de colecciones." }
+  ]
+}
